@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14363" started-at="2016-05-02T15:21:42Z" finished-at="2016-05-02T15:21:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14363" started-at="2016-05-02T15:21:42Z" finished-at="2016-05-02T15:21:56Z">
+      <class name="test.TestWithPageFactory">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestWithPageFactory@1933fd1]" name="setup" is-config="true" duration-ms="11372" started-at="2016-05-02T11:21:42Z" finished-at="2016-05-02T11:21:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testHomePageAppearCorrect()[pri:0, instance:test.TestWithPageFactory@1933fd1]" name="testHomePageAppearCorrect" duration-ms="2973" started-at="2016-05-02T11:21:53Z" finished-at="2016-05-02T11:21:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomePageAppearCorrect -->
+      </class> <!-- test.TestWithPageFactory -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
