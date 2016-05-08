@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.util.TempFile;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;
 import org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler;
 import org.apache.poi.xssf.usermodel.XSSFAnchor;
@@ -14,11 +15,27 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ReadWriteHybridExcel {
-		public static void main(String[] args)throws IOException {
+	
+		public static void main(String[] args) throws IOException {
+			String [][] temp = ReadHybridExcel();
+			System.out.println(temp[1][1]);
+		}
+		
+
+		public void name() throws IOException {
+			String [][] kobita = ReadHybridExcel();
+			System.out.println(kobita[3][1]);
+		}
+			
+			
+		
+		
+		public static String[][] ReadHybridExcel()throws IOException {
 		File file = new File("C:\\framework\\hybridExcel.xlsx");
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -40,7 +57,8 @@ public class ReadWriteHybridExcel {
                 }           
            }
         //return data[i][j];
-        
-        System.out.println(data[2][1]);      
+        System.out.println(data[2][1]);
+        return data;
+              
 		}
 }
