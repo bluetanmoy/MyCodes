@@ -14,14 +14,15 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class ReadWriteHybridExcel {
-public static void main(String[] args) throws IOException {
+		public static void main(String[] args)throws IOException {
 		File file = new File("C:\\framework\\hybridExcel.xlsx");
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("locators");
-	
 		
 		int rowNum = sheet.getLastRowNum()+1;
         int colNum = sheet.getRow(0).getLastCellNum();
@@ -36,9 +37,10 @@ public static void main(String[] args) throws IOException {
                     String value = String.valueOf(cell);                             
                    // System.out.println("Value: " + value);
                     data[i][j] = value;
-                }            
+                }           
            }
-        System.out.println(data[1][0]);
-	}
-
+        //return data[i][j];
+        
+        System.out.println(data[2][1]);      
+		}
 }
