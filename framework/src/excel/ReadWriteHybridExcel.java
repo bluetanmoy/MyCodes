@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.jar.Attributes.Name;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -22,14 +23,18 @@ import org.openqa.selenium.support.FindBy;
 public class ReadWriteHybridExcel {
 	
 		public static void main(String[] args) throws IOException {
-			String [][] temp = ReadHybridExcel();
-			System.out.println(temp[1][1]);
+			System.out.println("hey");
+			ReadHybridExcel();
+			//String [][] temp = ReadHybridExcel();
+			name();
+			//System.out.println(temp[0][0]);
 		}
 		
 
-		public void name() throws IOException {
-			String [][] kobita = ReadHybridExcel();
-			System.out.println(kobita[3][1]);
+		public static void name() throws IOException {
+			//String [][] kobita = ReadHybridExcel();
+			ReadHybridExcel();
+			//System.out.println(kobita[0][2]);
 		}
 			
 			
@@ -39,7 +44,7 @@ public class ReadWriteHybridExcel {
 		File file = new File("C:\\framework\\hybridExcel.xlsx");
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet("locators");
+		XSSFSheet sheet = workbook.getSheet("data");
 		
 		int rowNum = sheet.getLastRowNum()+1;
         int colNum = sheet.getRow(0).getLastCellNum();
@@ -57,7 +62,7 @@ public class ReadWriteHybridExcel {
                 }           
            }
         //return data[i][j];
-        System.out.println(data[2][1]);
+        System.out.println(data[0][0]);
         return data;
               
 		}
