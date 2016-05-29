@@ -3,8 +3,8 @@ package config;
 public class Constants {
 	//List of System Variables
 	public static final String URL = "http://www.store.demoqa.com";
-	public static final String Path_TestData = "C://WorkPlace//Hybrid Keyword Driven//src//dataEngine//DataEngine.xlsx";
-	public static final String Path_OR = "C://WorkPlace//Hybrid Keyword Driven//src//config//OR.txt";
+	public static final String Path_TestData = "C://local//Hybrid Keyword Driven//src//dataEngine//DataEngine.xlsx";
+	public static final String Path_OR = "C://local//Hybrid Keyword Driven//src//config//OR.txt";
 	public static final String File_TestData="DataEngine.xlsx";
 	//List of Data Sheet Column Numbers
 	public static final int Col_TestCaseID = 0;	
