@@ -1,8 +1,0 @@
-#Home Page Objects
-btn_MyAccount=//a[@class='account_icon']
-#Login Page Object
-txtbx_UserName=.//*[@id='log']
-txtbx_Password=.//*[@id='pwd']
-btn_Login=.//*[@id='login']
-#Logout Page Object
-btn_Logout=.//*[@id='account_logout']/a
